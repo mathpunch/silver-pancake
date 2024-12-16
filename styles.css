@@ -14,27 +14,38 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-color: #333;
+  background-image: url('nuketown_bg.png');  /* Nuketown background image */
+  background-size: cover;
+  background-position: center;
 }
 
 .player {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: #fff;
-  bottom: 50px;
-  left: 50px;
+  background-color: #ffcc00;
+  bottom: 30px;
+  left: 30px;
   border-radius: 50%;
 }
 
-.monster {
+.enemy {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   background-color: red;
-  bottom: 50px;
-  right: 50px;
   border-radius: 50%;
+  bottom: 100px;
+  right: 30px;
+  animation: enemyMovement 5s linear infinite;
+}
+
+@keyframes enemyMovement {
+  0% { top: 60vh; left: 10vw; }
+  25% { top: 20vh; left: 80vw; }
+  50% { top: 70vh; left: 20vw; }
+  75% { top: 50vh; left: 60vw; }
+  100% { top: 60vh; left: 10vw; }
 }
 
 .attack-button {
@@ -42,7 +53,7 @@ body {
   bottom: 20px;
   left: 20px;
   padding: 10px;
-  background-color: #ff0000;
+  background-color: red;
   color: white;
   border: none;
   border-radius: 5px;
@@ -70,20 +81,10 @@ body {
   border-radius: 50%;
 }
 
-#joystick-left,
-#joystick-right {
+.hud {
   position: absolute;
-  top: 50%;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(255, 0, 0, 0.6);
-}
-
-#joystick-left {
-  left: 0;
-}
-
-#joystick-right {
-  right: 0;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  color: white;
 }
