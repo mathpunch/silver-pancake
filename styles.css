@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+#game-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #333;
+}
+
+.player {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  bottom: 50px;
+  left: 50px;
+  border-radius: 50%;
+}
+
+.monster {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+}
+
+.attack-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.joystick {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.joystick:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#joystick-left,
+#joystick-right {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+#joystick-left {
+  left: 0;
+}
+
+#joystick-right {
+  right: 0;
+}
